@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://www.gstatic.com/external_hosted/handlebars/v4.7.6/handlebars.min.js"></script>
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -29,9 +33,11 @@
 
   </head>
   <body>
+
+	<!-- MENU -->
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Coffee<small>Blend</small></a>
+	      <a class="navbar-brand" href="index.html">Cantina<small>UAA</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -57,8 +63,9 @@
 	      </div>
 		  </div>
 	  </nav>
-    <!-- END nav -->
+    <!-- Final del MENU -->
 
+	<!-- Efecto Carrusel del menu -->
     <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image: url(images/uaa_fondo.jpg);"><!-- fondo en efecto carrusel --> 
       	<div class="overlay"></div>
@@ -77,7 +84,7 @@
       </div>
 
       <div class="slider-item" style="background-image: url(images/uaa_fondo.jpg);"> <!-- esta es la segunda foto del efecto carrusel -->
-      	<div class="overlay"></div> <!-- es una prueba de github-->
+      	<div class="overlay"></div> 
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
@@ -109,6 +116,9 @@
       </div>
     </section>
 
+	<!-- Fin del Efecto Carrusel del menu -->
+
+	<!--Cuadro informativo-->
     <section class="ftco-intro">
     	<div class="container-wrap">
     		<div class="wrap d-md-flex align-items-xl-end">
@@ -140,6 +150,8 @@
     		</div>
     	</div>
     </section>
+	
+	<!--Cuadro informativo-->
 
     <section class="ftco-about d-md-flex">
     	<div class="one-half img" style="background-image: url(images/about.jpg);"></div>
@@ -195,6 +207,8 @@
     	</div>
     </section>
 
+	<!--Primer Sección-->
+
     <section class="ftco-section">
     	<div class="container">
     		<div class="row align-items-center">
@@ -234,6 +248,10 @@
     	</div>
     </section>
 
+	<!--Fin del Primer Sección-->
+
+	<!--Segunda Sección-->
+	
     <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
       <div class="container">
@@ -281,8 +299,11 @@
         </div>
       </div>
     </section>
+	
+	<!--Fin Segunda Sección-->
 
-    <section class="ftco-section">
+	<!--Tercera Sección-->
+	<section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
@@ -339,7 +360,9 @@
         </div>
     	</div>
     </section>
+	<!--Fin de la tercera Sección-->
 
+	<!--Galeria / blog ?-->
     <section class="ftco-gallery">
     	<div class="container-wrap">
     		<div class="row no-gutters">
@@ -347,7 +370,7 @@
 						<a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg);">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-search"></span>
-    					</div>
+							</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
@@ -371,10 +394,12 @@
     					</div>
 						</a>
 					</div>
-        </div>
+        	</div>
     	</div>
     </section>
+	<!--FIN Galeria / blog ?-->
 
+		<!--Menu-Productos-->
 		<section class="ftco-menu">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
@@ -520,7 +545,9 @@
 		    </div>
     	</div>
     </section>
+	<!--Fin menu-Productos-->
 
+	<!--Testimonios-->
     <section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_1.jpg);"  data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
 	    <div class="container">
@@ -602,7 +629,9 @@
 	      </div>
 	    </div>
 	  </section>
-
+	<!--Fin Testimonios-->
+	
+	<!--BLOG-->
     <section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
@@ -660,17 +689,27 @@
         </div>
       </div>
     </section>
+	<!--FIN BLOG-->
 
-		
+	<!--RESERVA-->
 		<section class="ftco-appointment">
 			<div class="overlay"></div>
     	<div class="container-wrap">
     		<div class="row no-gutters d-md-flex align-items-center">
-    			<div class="col-md-6 d-flex align-self-stretch">
-    				<div id="map"></div>
+    			
+				<!--Comienzo del mapa-->
+
+				<div class="col-md-6 d-flex align-self-stretch">
+    				<div id="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7215.0035798267945!2d-57.64622256455467!3d-25.287339799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da7f63ae3d5fd%3A0x4dc6c9d6c6fb50cf!2sUniversidad%20Aut%C3%B3noma%20de%20Asunci%C3%B3n%20(UAA)!5e0!3m2!1ses-419!2spy!4v1626019873623!5m2!1ses-419!2spy" width="1025" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
     			</div>
-	    		<div class="col-md-6 appointment ftco-animate">
-	    			<h3 class="mb-3">Book a Table</h3>
+	    		
+				<!--Fin mapa-->
+
+				<!-- CONSULTA -->
+				<div class="col-md-6 appointment ftco-animate">
+	    			<h3 class="mb-3">Ayudanos a mejorar</h3>
 	    			<form action="#" class="appointment-form">
 	    				<div class="d-md-flex">
 		    				<div class="form-group">
@@ -678,24 +717,7 @@
 		    				</div>
 		    				<div class="form-group ml-md-4">
 		    					<input type="text" class="form-control" placeholder="Last Name">
-		    				</div>
-	    				</div>
-	    				<div class="d-md-flex">
-		    				<div class="form-group">
-		    					<div class="input-wrap">
-		            		<div class="icon"><span class="ion-md-calendar"></span></div>
-		            		<input type="text" class="form-control appointment_date" placeholder="Date">
-	            		</div>
-		    				</div>
-		    				<div class="form-group ml-md-4">
-		    					<div class="input-wrap">
-		            		<div class="icon"><span class="ion-ios-clock"></span></div>
-		            		<input type="text" class="form-control appointment_time" placeholder="Time">
-	            		</div>
-		    				</div>
-		    				<div class="form-group ml-md-4">
-		    					<input type="text" class="form-control" placeholder="Phone">
-		    				</div>
+							</div>    		
 	    				</div>
 	    				<div class="d-md-flex">
 	    					<div class="form-group">
@@ -710,6 +732,7 @@
     		</div>
     	</div>
     </section>
+	<!--FIN CONSULTA-->
 
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
@@ -791,7 +814,7 @@
   
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="8px" height="8px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>
@@ -808,9 +831,10 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=IzaSyAXwM0uAZraZZYTxKFQyWmMXO6gQdB_sAQ&callback=iniciarMap"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  
     
   </body>
 </html>
